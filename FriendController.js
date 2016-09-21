@@ -1,4 +1,5 @@
-angular.module("app").controller('FriendController', function($scope){
+angular.module('app').controller('FriendController', function($scope){
+    
     $scope.friends = [
       {
         "name": "Preston McNeil",

@@ -18,21 +18,23 @@
 
         <!-- STEP 5: Get rid of the one above when you uncomment the below-->
 
-        <input class="form-control" placeholder="Search Name">
-        <input class="form-control" placeholder="Search Location">
+        <input class="form-control" placeholder="Search Name" ng-model="friendFilter.name">
+        <input class="form-control" placeholder="Search Location" ng-model="friendFilter.current_location.name">
+        
+
 
 
         <select class="input-medium" ng-model="sortProp">
           <option value="name">Name</option>
-          <option value="friend_count">#Friends</option>
+          <option value="friend_count"># Friends</option>
           <option value="current_location.city">City</option>
           <option value="current_location.state">State</option>
           <option value="current_location.country">Country</option>
         </select>
 
         <select class="input-medium" ng-model="sortDirection">
-        <option value="+">Descending</option>
-        <option value="-">Ascending</option>
+        <option value="true">Descending</option>
+        <option value="">Ascending</option>
         </select>
 
       </div>
@@ -55,11 +57,7 @@
         <div class="num-friends">
             Friends: {{friend.friend_count}}
         </div>
-        </li>
-        <input class="form-control" placeholder="Search Anything About Your Friends"
-               ng-model="friendFilter">
-
- <ul ng-repeat="friend in friends | filter: friendFilter">
+      </li>
     </ul>
   </div>
 
